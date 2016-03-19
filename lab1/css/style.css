@@ -1,0 +1,403 @@
+body
+{	font-family: Arial, Verdana, Tahoma;
+	font-size:12px;
+	color: #333;
+	margin: 0px;
+	padding: 0px;
+}
+
+.menu {
+ width: 100%;
+ background-image: url(../images/orange-tile.png);
+ height: 60px;
+ background-repeat:repeat;
+ position: fixed;
+ margin:auto;
+ z-index: 1; 
+}
+
+.navbar{
+	width: 940px;    
+	padding-top: 0px;
+	margin: auto;
+	list-style: none;
+}
+
+.icon-minininja {
+	background-image: url(../images/mini-ninja.png);
+	padding: 0;
+	margin: 2px 0 0;
+	float:left;
+	height: 56px;
+	width: 76px;
+}
+
+.icon-title {
+	background-image: url(../images/title.png);
+	float: left;
+	height: 38px;
+	width: 188px;
+	margin-top: 15px;
+	margin-left: 10px;
+	margin-right: 35px;
+}
+
+
+.container {
+	width: 940px;
+	margin: auto;
+	overflow: hidden;
+	padding-top: 30px;
+}
+
+.container2 {
+	width: 100%;
+	padding-top: 50px;
+	padding-bottom: 90px;
+	display: block;  
+}
+
+.btn-midle-container {
+	width: 100%;
+	height: 23px;
+	margin-bottom: 40px;
+	margin-top: 40px;
+	text-align: center;
+	
+}
+
+.row {
+	width: 940px;
+	box-sizing: border-box;
+	float: left;
+	padding-top: 30px;
+	margin-left: -20px;
+}
+
+.one-third {
+	width: 313px;
+	float: left;
+}
+
+.two-thirds {
+	width: 626px;
+	float: left;
+}
+
+.icon-free {
+	background-image: url(../images/free.png);
+	height: 241px;
+	width: 264px;
+	background-repeat: no-repeat;
+}
+.icon-ninja {
+	background-image: url(../images/ninja.png);
+	width: 256px;
+	height: 211px;
+	margin: 0 auto;
+}
+
+.icon-collab {
+	background-image: url(../images/collaborative.png);
+	width: 274px;
+	height: 144px;
+	margin: 0 auto;
+}
+
+.icon-sketchy {
+	background-image: url(../images/sketchy.png);
+	width: 272px;
+	height: 240px;
+	margin: 0 auto;
+}
+
+.voice-btn {
+	background-image: url(../images/voice-btn.png);
+	float: left;
+	width: 159px;
+	height: 39px;
+}
+
+.facebook-btn {
+	background-image: url(../images/facebook-btn.png);
+	float: left;
+	width: 117px;
+	height: 39px;
+	margin-left: 40px;
+}
+
+.twitter-btn {
+	background-image: url(../images/twitter-btn.png);
+	float: left;
+	width: 104px;
+	height: 39px;
+	margin-left: 40px;
+}
+
+.platforms {
+	width: 480px;
+	height: 40px;
+	margin: 0 auto;
+	margin-top: 30px;
+	position: relative
+}
+
+.start-design {
+	margin-top: 10px;
+	padding: 12px;
+	float: right;
+	background: #83b931;
+	color: #FFF;
+	font-size: 16px;
+	border-radius: 2px;
+	text-decoration: none;
+}
+
+.start-design:hover {
+	background:	#7eb431;
+}
+
+.btn-primary {
+	width: 218px;
+	height: 46px;
+	margin: 0 auto;
+	margin-top: 10px;
+	padding: 12px;
+	background:	#F56042;
+	color: #FFF;
+	font-size: 16px;
+	border-radius: 2px;
+	text-decoration: none;
+}
+
+.btn-primary:hover {
+	background:	#F54724;
+}
+
+.right {
+text-align: right;
+padding-right: 30px;
+}
+
+p {
+margin-top: 20px;
+font-size: 18px;
+line-height: 24px;
+margin-right: 30px;
+}
+
+h1 {
+font-size: 30pt;
+line-height: 30px;
+font-weight: bold;
+}
+
+.navbar li a{
+	margin-right:35px;
+	margin-top: 29px;
+	color: #fff;
+	float:left;
+	position: relative;
+	line-height: 20px;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+.message {
+	text-align: center;
+	font-size: 30pt;
+	font-weight: bold;
+	padding-top: 30px;
+}
+
+.triangle-left {
+	border-bottom-style: solid;
+	border-left-style: solid;
+	transform-origin: 0 100%;
+	transform: rotate(45deg);
+	width: 55px;
+	height: 55px;
+   	margin-top:50px;
+	border-color: #f56042;
+	border-width: 2px;
+	float: left;
+    cursor: pointer;
+	z-index: 5;
+}
+
+.triangle-right {
+	border-bottom-style: solid;
+	border-right-style: solid;
+	transform-origin: 100% 100%;
+	transform: rotate(-45deg);
+	width: 55px;
+	height: 55px;
+	border-color: #f56042;
+	border-width: 2px;
+    margin-top: 50px;
+	float: right;
+   	cursor: pointer;
+	z-index: 5;
+}
+
+.review {
+    margin: 0 auto;
+	max-width: 730px;
+    float:left;
+   	margin-left:50px;
+}
+.quote {
+	font-size: 32px;
+	line-height: 40px;
+	color: #3d3d3d;
+	font-family: Georgia;
+	font-style: italic;    
+}
+
+.signature {
+	font-size: 16px;
+    margin-top: 50px;
+}
+
+a {
+	font-size: 16px;
+	color: #333;
+}
+
+.column {
+	width: 215px;
+	margin-left: 20px;
+	float: left;
+	font-size: 13px;
+	line-height: 20px;
+}
+
+.date {
+	width: 215px;
+	margin-bottom: 10px;
+	float: left;
+	font-size: 18px;
+	line-height: 40px;
+}
+
+.mail {
+	font-size: 16px;
+    margin-bottom: 10px;
+	text-align: center;
+}
+
+.validation {
+	margin: 20px auto 0;
+}
+
+.span4 {
+	float: left;
+	width: 440px;
+	margin-left: 20px;
+}
+
+.name-email {
+	float: right;
+	width: 313px;
+}
+
+.control-group {
+}
+
+.control-group+.control-group {
+	margin-top: 20px;
+}
+
+.control-group:before {
+	display: table;
+	line-height: 0;
+	content: "";
+}
+
+.control-group:after {
+	clear:	both;
+}
+
+.control {
+	margin-left: 0;
+}
+
+input[type="text"] {
+	display: inline-block;
+	color: #000;
+	background-color: #F5F5F5;
+	margin: 0;
+	font-size: 13px;
+	width: 100%;
+	height: 44px;
+	border: 1px solid #b5b5b5;
+	border-radius: 3px;
+	padding: 0;
+	vertical-align: middle;
+	line-height: 20px;
+}
+
+textarea {
+	width: 315px;
+	height: 113px;
+	display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+	background-color: #f5f5f5;
+    border: 1px solid #b5b5b5;
+	border-radius: 3px;
+	margin: 0;
+	font-size: 13px;
+	font-weight: normal;
+	padding: 0;
+	overflow: auto;
+	box-sizing: border-box;
+	max-width: 450px;
+}
+
+footer {
+	display: block;
+	position: absolute;
+    height: 125px;
+	background-color: #393939;
+	color: white;
+    width: 100%;
+	font-size: 10pt;
+	line-height: 11pt;
+}
+
+.box {
+    position: relative;
+    margin: 35px auto 0;
+	box-sizing: border-box;
+	width: 33%;
+}
+
+footer .box .column {
+	display: block;
+	position: absolute;
+	width: 150px;
+	line-height: 11pt;
+}
+
+footer .box .column:nth-child(1) {
+	left: 0;
+}
+
+footer .box .column:nth-child(2) {
+	right: 0;
+}
+
+footer .box .column div:first-child {
+	color: #767676;
+}
+
+footer .box .column div+ div {
+	margin-top: 4px;
+}
+
+footer a {
+	color: white;
+	font-size: 10pt;
+	text-decoration: none;
+}
