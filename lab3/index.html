@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        
+        <title>Test Chat</title>
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    
+    <body>
+     
+        <div class="chat">
+            
+            <h1>Chat box <img src='./images/refresh.png'/></h1>
+            
+            <ul class="chat-content"></ul>
+            
+            <div class="chat-form">
+                <h2>Write a message <span>×</span></h2>
+                
+                <form action="./post.php" method="post">
+                    <label for="chat-name">Nickname </label> <input type="text" id="chat-name" name="name"/>
+                    <label class="chat-comment-label" for="chat-comment">Message </label> <textarea id="chat-comment" name="comment" maxlength='240'></textarea>
+                    <input type="submit" value="Send"/>
+                </form>
+            </div>
+            
+        </div>
+
+        <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script src="./js/chat.js"></script>
+
+    </body>
+    
+</html>
