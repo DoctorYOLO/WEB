@@ -1,0 +1,110 @@
+[
+    {
+        "name": "jamesmoss/flywheel",
+        "version": "0.5.1",
+        "version_normalized": "0.5.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/jamesmoss/flywheel.git",
+            "reference": "1600939e2c52075f62f999bb0744b4a2dd7528f5"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/jamesmoss/flywheel/zipball/1600939e2c52075f62f999bb0744b4a2dd7528f5",
+            "reference": "1600939e2c52075f62f999bb0744b4a2dd7528f5",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.2"
+        },
+        "require-dev": {
+            "mikey179/vfsstream": "1.2.0",
+            "mockery/mockery": "dev-master@dev",
+            "mustangostang/spyc": "0.5.*@dev",
+            "phpunit/phpunit": "3.7.*"
+        },
+        "suggest": {
+            "mustangostang/spyc": "You must install this if you're using the YAML or Markdown formatters."
+        },
+        "time": "2016-06-05 14:02:57",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "JamesMoss\\Flywheel\\": [
+                    "src/",
+                    "test/"
+                ]
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "James Moss",
+                "email": "james@moss.io",
+                "homepage": "http://moss.io"
+            }
+        ],
+        "description": "A lightweight, flat-file, document database",
+        "homepage": "http://github.com/jamesmoss/flywheel",
+        "keywords": [
+            "db",
+            "document",
+            "file",
+            "flat"
+        ]
+    },
+    {
+        "name": "mpratt/relativetime",
+        "version": "1.5.4",
+        "version_normalized": "1.5.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/mpratt/RelativeTime.git",
+            "reference": "3dc1efd96c8edbd0fe9e5cdb423ca31428b9dbb7"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/mpratt/RelativeTime/zipball/3dc1efd96c8edbd0fe9e5cdb423ca31428b9dbb7",
+            "reference": "3dc1efd96c8edbd0fe9e5cdb423ca31428b9dbb7",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3"
+        },
+        "time": "2015-12-24 12:43:04",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "RelativeTime": "Lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Michael Pratt",
+                "email": "pratt@hablarmierda.net",
+                "homepage": "http://www.michael-pratt.com",
+                "role": "Author/Developer"
+            }
+        ],
+        "description": "A library that calculates the time difference between two dates and returns the result in words (Example: 5 minutes ago or 5 Minutes left). The library supports other languages aswell like Spanish and German.",
+        "homepage": "https://github.com/mpratt/RelativeTime",
+        "keywords": [
+            "ago",
+            "date",
+            "future",
+            "interval",
+            "relative",
+            "time",
+            "time-ago"
+        ]
+    }
+]

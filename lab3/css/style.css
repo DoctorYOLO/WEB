@@ -15,6 +15,11 @@ body{
     overflow: hidden;
 }
 
+li {
+    -webkit-hyphens: auto; -ms-hyphens: auto; hyphens: auto;
+    word-wrap: break-word;
+}
+
 h1 {
     background-color:  #87bfef;
     box-shadow: 0px 1px 1px 0.00px rgba(0, 0, 0, 0.1);
@@ -49,6 +54,9 @@ h1 img {
     font-size: 14px;
     font-weight: 700;
     text-align: left;
+    max-height: 380px;
+    min-height: 50px;
+    overflow-y: auto;
 }
 
 .chat-content li {
@@ -124,7 +132,7 @@ h2 span {
     box-shadow: 0px 2px 0px 0.00px #e2e8eb;
     max-width: 100%;
     text-align: left;
-    padding: 20px 20px 30px;
+    padding: 20px 20px 30px;\
 }
 
 .chat-form form label {

@@ -1,0 +1,6 @@
+{
+    "require": {
+        "jamesmoss/flywheel": "^0.5.1",
+        "mpratt/relativetime": "^1.5"       
+    }
+}
