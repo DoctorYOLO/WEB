@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4552210cda460db6297648aa556155f6",
-    "content-hash": "8b5792957212c101f0adb569e619247c",
+    "hash": "400f9a8e37a7a214aa3e897363ba4958",
+    "content-hash": "6f8e044b35dcc48a428bd24cdf0c1a22",
     "packages": [
         {
             "name": "jamesmoss/flywheel",

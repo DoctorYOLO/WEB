@@ -45,7 +45,7 @@ $(function() {
         }
         
     });
-
+    
     var canReload = true;
 
     refreshButton.click(function(){
@@ -80,15 +80,31 @@ $(function() {
     
     function post(name,comment){
     
+        $.post('post.php', {name: name, comment: comment}, function(){
+            nameElement.val("");
+            commentElement.val("");
+            load();
+        });
 
     }
     
     function load(){
-        
+        $.getJSON('./load.php', function(data) {
+            appendComments(data);
+        });
     }
     
     function appendComments(data) {
 
+        ul.empty();
+
+        data.forEach(function(d){
+            ul.append('<li>'+
+                '<span class="chat-username">' + d.name + '</span>'+
+                '<p class="chat-comment">' + d.text + '</p>'+  
+                '<span class="chat-comment-ago">' + d.timeAgo + '</span></div>'+
+            '</li>');
+        });
 
     }
 
