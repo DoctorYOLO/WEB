@@ -3,10 +3,10 @@
 class handler
 {
      const SLEEP = 1;
-     const COOKIE_FILE   =   "cookie.dat";
+     const COOKIE_FILE   =   "cookie.txt";
      const AUTH_URL      =   "http://super-warez.net/";
 	 const COMMENTS_URL  =   "http://super-warez.net/engine/ajax/addcomments.php?";
-	 const MAIN_URL		 =   "http://super-warez.net/favorites/";
+	 const MAIN_URL		 =   "http://super-warez.net/";
 	 const FAILED_DOWNLOAD_SLEEP = 2;
 	 const ATTEMPTS = 5;
 
@@ -43,7 +43,7 @@ class handler
         
         return $result;
 	}
-	
+
 	private function login($url, $login, $password)
 	{
 		return $this->initCurl($url, $url, "login=submit"."login_name=".$login."&login_password=".$password);
@@ -82,24 +82,25 @@ class handler
 			$html->preserveWhiteSpace = false;
 			if ($html->loadHTML($page))
 			{
-				$xPathExt = "//*[@id=content]/table/tbody/tr/td/div/div/div[1]/a/h2";
+				$xPathExt = "//*[@id=\"dle-content\"]/div[1]/h2/a";
 				$xPath = new DOMXPath($html);
 				$nodelist = $xPath->query($xPathExt);
 				
 				foreach($nodelist as $n)
 				{
-					return self::MAIN_URL . $n->getAttribute('href');
+					return $n->getAttribute('href');
 				}
 			}
 		}
-        
-        echo "mainpage";
 		
 		return "";
 	}
 	
-	public function sendMessage($url, $text)
+	public function sendMessage($url, $text, $login)
 	{
+        preg_match_all("/([0-9])\w+/", $url, $postId);
+        echo $postId[0][0];
 
+		return $this->initCurl(self::COMMENTS_URL, self::MAIN_URL, "post_id=" . $postId[0][0] . "&comments=" . $text . "&name=" . $login . "&mail=&editor_mode=&skin=ruster_sw_96&sec_code=&question_answer=&recaptcha_response_field=&recaptcha_challenge_field=&allow_subscribe=0");
 	}
 }
