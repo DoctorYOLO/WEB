@@ -4,9 +4,9 @@ class handler
 {
      const SLEEP = 1;
      const COOKIE_FILE   =   "cookie.txt";
-     const AUTH_URL      =   "http://super-warez.net/";
-	 const COMMENTS_URL  =   "http://super-warez.net/engine/ajax/addcomments.php?";
-	 const MAIN_URL		 =   "http://super-warez.net/";
+     const AUTH_URL      =   "http://all4cms.ru/";
+	 const COMMENTS_URL  =   "http://all4cms.ru/engine/ajax/addcomments.php";
+	 const MAIN_URL		 =   "http://all4cms.ru/";
 	 const FAILED_DOWNLOAD_SLEEP = 2;
 	 const ATTEMPTS = 5;
 
@@ -27,7 +27,7 @@ class handler
 
         curl_setopt($ch, CURLOPT_URL, $url);
 		curl_setopt($ch, CURLOPT_REFERER, $ref);
-        curl_setopt($ch, CURLOPT_VERBOSE, 0);
+        curl_setopt($ch, CURLOPT_VERBOSE, 1);
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $postfields);
@@ -46,9 +46,9 @@ class handler
 
 	private function login($url, $login, $password)
 	{
-		return $this->initCurl($url, $url, "login=submit"."login_name=".$login."&login_password=".$password);
+		return $this->initCurl($url, $url, "login_name=".$login."&login_password=".$password."&login=submit");
 	}
-	
+
 	public function loadMainPage()
 	{
 		sleep(self::SLEEP);
@@ -82,7 +82,7 @@ class handler
 			$html->preserveWhiteSpace = false;
 			if ($html->loadHTML($page))
 			{
-				$xPathExt = "//*[@id=\"dle-content\"]/div[1]/h2/a";
+				$xPathExt = "//*[@id=\"dle-content\"]/article[1]/div[1]/h2/a";
 				$xPath = new DOMXPath($html);
 				$nodelist = $xPath->query($xPathExt);
 				
@@ -98,9 +98,9 @@ class handler
 	
 	public function sendMessage($url, $text, $login)
 	{
-        preg_match_all("/([0-9])\w+/", $url, $postId);
-        echo $postId[0][0];
 
-		return $this->initCurl(self::COMMENTS_URL, self::MAIN_URL, "post_id=" . $postId[0][0] . "&comments=" . $text . "&name=" . $login . "&mail=&editor_mode=&skin=ruster_sw_96&sec_code=&question_answer=&recaptcha_response_field=&recaptcha_challenge_field=&allow_subscribe=0");
+        preg_match_all("/([0-9])\w+/", $url, $postId);
+        $data = "post_id=".$postId[0][1]."&comments=".$text."&name=".$login."&mail=&editor_mode=&skin=all4cms&sec_code=&question_answer=&recaptcha_response_field=&recaptcha_challenge_field=&allow_subscribe=0";
+		return $this->initCurl(self::COMMENTS_URL, $url, $data);
 	}
 }

@@ -5,7 +5,7 @@ include("handler.class.php");
 const LOGIN         =   "drYOLO";
 const PASSWORD      =   "testpassword";
 
-$text   =   "test";
+$text   =   "this is test message";
 
 error_reporting( E_ERROR );
 
